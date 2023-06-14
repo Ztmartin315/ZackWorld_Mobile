@@ -1,0 +1,28 @@
+^C:\GENEVACODE\PERSONAL\ZACKWORLD_APP\BUILD\WINDOWS\CMAKEFILES\16684B7F5B5EA25BA226443DF6280348\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Flutter\flutter PROJECT_DIR=C:\GenevaCode\Personal\zackworld_app FLUTTER_ROOT=C:\Flutter\flutter FLUTTER_EPHEMERAL_DIR=C:\GenevaCode\Personal\zackworld_app\windows\flutter\ephemeral PROJECT_DIR=C:\GenevaCode\Personal\zackworld_app FLUTTER_TARGET=C:\GenevaCode\Personal\zackworld_app\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\GenevaCode\Personal\zackworld_app\.dart_tool\package_config.json C:/Flutter/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GENEVACODE\PERSONAL\ZACKWORLD_APP\BUILD\WINDOWS\CMAKEFILES\BC2B46D625EF9CCD592835EBB8C0356A\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\GENEVACODE\PERSONAL\ZACKWORLD_APP\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/GenevaCode/Personal/zackworld_app/windows -BC:/GenevaCode/Personal/zackworld_app/build/windows --check-stamp-file C:/GenevaCode/Personal/zackworld_app/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^C:\GENEVACODE\PERSONAL\ZACKWORLD_APP\BUILD\WINDOWS\CMAKEFILES\50B7FA5AD8FA718E5A01D0823B290F99\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
