@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:getwidget/getwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,9 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Text(
               "ZackWorld",
-              style: TextStyle(color: Colors.black, fontSize: 45),
+              style: GoogleFonts.pressStart2p(
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                ),
+              ),
               textAlign: TextAlign.center,
             ),
+            //fontStyle: GoogleFonts.pressStart2p()
 
             //SizedBox for spacing
             const SizedBox(
@@ -226,13 +234,61 @@ class resumeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Zack's Resume"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.only(
+          left: 10,
+          right: 10,
+          top: 20,
         ),
+        child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            physics: ScrollPhysics(),
+            children: <Widget>[
+              SizedBox(
+                height: 25,
+              ),
+
+              //Education Accordion
+              GFTypography(
+                text: 'Education',
+              ),
+              GFAccordion(
+                title: 'View Education',
+                content: 'ex\nex',
+              ),
+
+              SizedBox(
+                height: 25,
+              ),
+
+              //Work Experience Accordion
+              GFTypography(
+                text: 'Work Experience',
+              ),
+              GFAccordion(
+                title: 'View Work Experience',
+                content: 'ex\nex',
+              ),
+
+              SizedBox(
+                height: 25,
+              ),
+
+              //Personal Projects Accordion
+              GFTypography(text: 'Personal Projects'),
+              GFAccordion(title: 'View Personal Projects', content: 'ex\nex'),
+
+              SizedBox(
+                height: 25,
+              ),
+
+              //Clubs and ActivitiesAccordion
+              GFTypography(text: 'Clubs & Activities'),
+              GFAccordion(title: 'View Clubs & Activities', content: 'ex\nex'),
+            ]),
       ),
     );
   }
